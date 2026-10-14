@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#146c5a">
+  <meta name="description" content="Vidya.AI — accessible, offline-first learning for every student.">
+  <title>Vidya.AI | Learn with confidence</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script async src="https://cdn.tailwindcss.com"></script>
+  <script async src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Vidya.AI home">
+      <span class="brand-mark" aria-hidden="true">वि</span>
+      <span>Vidya<span class="brand-dot">.</span>AI<small>LEARN, GROW, THRIVE</small></span>
+    </a>
+    <div class="topbar-actions">
+      <span id="network-status" class="network-status" role="status" aria-live="polite">
+        <span class="status-dot" aria-hidden="true"></span><span id="network-label">Checking connection</span>
+      </span>
+      <div class="mode-switch" role="group" aria-label="Choose dashboard">
+        <button id="student-mode-button" class="mode-button is-active" type="button" aria-pressed="true">Student</button>
+        <button id="teacher-mode-button" class="mode-button" type="button" aria-pressed="false">Teacher</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-shell">
+    <section id="student-dashboard" aria-labelledby="welcome-title">
+      <div class="welcome-row">
+        <div>
+          <p class="eyebrow">YOUR LEARNING SPACE</p>
+          <h1 id="welcome-title">Namaste, <span id="student-greeting">learner</span>!</h1>
+          <p class="welcome-copy">Small steps every day make a big difference.</p>
+        </div>
+        <form id="profile-form" class="profile-form">
+          <label for="student-name">Your name</label>
+          <div class="profile-input-row">
+            <input id="student-name" name="student-name" maxlength="32" autocomplete="given-name" aria-label="Your name">
+            <button class="button button-small" type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="stats-grid" aria-label="Your learning progress">
+        <article class="stat-card">
+          <span class="stat-icon icon-green" aria-hidden="true">✦</span>
+          <div><p class="stat-label">Current mastery</p><p class="stat-value"><span id="mastery-score">0</span><span class="stat-unit">%</span></p></div>
+          <p class="stat-note">Keep practising</p>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon icon-sun" aria-hidden="true">☀</span>
+          <div><p class="stat-label">Daily streak</p><p class="stat-value"><span id="streak-count">0</span><span class="stat-unit"> days</span></p></div>
+          <p class="stat-note">One day at a time</p>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon icon-blue" aria-hidden="true">✓</span>
+          <div><p class="stat-label">Quizzes completed</p><p class="stat-value"><span id="quiz-count">0</span></p></div>
+          <p class="stat-note">Your effort counts</p>
+        </article>
+      </div>
+
+      <section class="content-section" aria-labelledby="topics-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">READY WHEN YOU ARE</p><h2 id="topics-title">Recommended for you</h2></div>
+          <label class="visually-compact" for="dialect-select">Explanation language
+            <select id="dialect-select">
+              <option value="en">English</option>
+              <option value="hi">हिन्दी</option>
+              <option value="rural_hindi">Rural Hindi</option>
+              <option value="bhojpuri">Bhojpuri</option>
+              <option value="maithili">Maithili</option>
+              <option value="bundeli">Bundeli (Rural Hindi)</option>
+            </select>
+          </label>
+        </div>
+        <div id="topic-list" class="topic-grid"></div>
+      </section>
+
+      <div class="learning-grid">
+        <section class="panel explainer-panel" aria-labelledby="explainer-title">
+          <div class="panel-heading">
+            <div><p class="eyebrow">LEARN IT YOUR WAY</p><h2 id="explainer-title">A simple explanation</h2></div>
+            <button id="read-aloud-button" class="icon-button" type="button" aria-label="Read explanation aloud" title="Read aloud">🔊</button>
+          </div>
+          <div id="explanation-content" class="explanation-content" aria-live="polite"></div>
+        </section>
+
+        <section id="quiz-panel" class="panel quiz-panel" aria-labelledby="quiz-heading">
+          <div class="panel-heading">
+            <div><p class="eyebrow">QUICK PRACTICE</p><h2 id="quiz-heading">Try one question</h2></div>
+            <span id="difficulty-badge" class="difficulty-badge">Level 1</span>
+          </div>
+          <div id="quiz-content"></div>
+        </section>
+      </div>
+      <p id="app-message" class="app-message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="teacher-dashboard" class="hidden" aria-labelledby="teacher-title">
+      <div class="teacher-hero">
+        <div><p class="eyebrow">TEACHER LEARNING GAP DASHBOARD</p><h1 id="teacher-title">See where your class needs a hand.</h1>
+          <p id="hub-caption" class="welcome-copy">Panchayat Learning Center, Ward 4 · Class snapshot</p></div>
+        <div class="enrolment-card"><span aria-hidden="true">👩‍🏫</span><div><strong id="enrolment-count">42</strong><small>learners enrolled</small></div></div>
+      </div>
+      <section class="filter-panel" aria-label="Filter learning gaps">
+        <div class="filter-field"><label for="topic-filter">Topic</label><select id="topic-filter"><option value="all">All topics</option></select></div>
+        <div class="filter-field"><label for="student-filter">Student</label><select id="student-filter"><option value="all">Whole class</option></select></div>
+        <div class="filter-field"><label for="difficulty-filter">Difficulty</label><select id="difficulty-filter"><option value="all">All levels</option><option value="1">Level 1 · Getting started</option><option value="2">Level 2 · Building skills</option><option value="3">Level 3 · Stretching</option></select></div>
+        <button id="clear-filters" class="button button-quiet" type="button">Clear filters</button>
+      </section>
+      <div class="teacher-summary">
+        <article class="summary-card"><span class="summary-icon">◎</span><div><small>Diagnostic responses</small><strong id="response-total">0</strong></div></article>
+        <article class="summary-card"><span class="summary-icon summary-amber">↗</span><div><small>Priority learning gaps</small><strong id="gap-total">0</strong></div></article>
+      </div>
+      <section class="content-section" aria-labelledby="heatmap-title">
+        <div class="section-heading"><div><p class="eyebrow">CLASS-WIDE DIAGNOSTICS</p><h2 id="heatmap-title">Learning gap heatmap</h2></div><span class="live-label"><span class="live-dot"></span>Updates as students practise</span></div>
+        <div id="heatmap" class="heatmap-list"></div>
+      </section>
+      <section class="panel teacher-insight" aria-labelledby="intervention-title">
+        <div class="insight-icon" aria-hidden="true">✳</div>
+        <div><p class="eyebrow">A PRACTICAL NEXT STEP</p><h2 id="intervention-title">Recommended classroom intervention</h2><div id="intervention-list"></div></div>
+      </section>
+      <p id="teacher-empty-state" class="empty-note hidden">No learning gaps match these filters yet. Student practice will appear here automatically.</p>
+    </section>
+
+    <footer class="site-footer"><span>Vidya.AI</span><span>Learning for every learner · SDG 4: Quality Education</span><span id="storage-note">Progress is saved on this device</span></footer>
+  </main>
+  <script src="./app.js" defer></script>
+</body>
+</html>

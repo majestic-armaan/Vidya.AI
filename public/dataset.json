@@ -1,0 +1,187 @@
+{
+  "curriculum": [
+    {
+      "id": "sci_bio_01",
+      "grade": 6,
+      "subject": "Science",
+      "topic": "Photosynthesis (प्रकाश संश्लेषण)",
+      "standard_definitions": {
+        "en": "Photosynthesis is the biological process by which green plants use sunlight, water, and carbon dioxide to create oxygen and energy in the form of sugar.",
+        "hi": "प्रकाश संश्लेषण वह प्रक्रिया है जिसमें हरे पौधे सूर्य के प्रकाश, पानी और कार्बन डाइऑक्साइड का उपयोग करके अपना भोजन और ऑक्सीजन बनाते हैं।"
+      },
+      "dialect_adaptations": {
+        "bhojpuri": {
+          "title": "पेड़-पौधा के खाना बनावे के तरीका",
+          "explanation": "जइसे हमनी के घरे माई चूल्हा पर धूप, पानी आ आटा से रोटी पकावेली, ओसही हरियर पतई धूप, पानी आ हवा सोख के आपन भोजन तैयार करेली सन। इहे प्रक्रिया के प्रकाश संश्लेषण कहल जाला।",
+          "metaphor": "पत्ता पौधा के चूल्हा हटे, आ सुरुज भगवान के घाम चूल्हा के आग हटे।"
+        },
+        "maithili": {
+          "title": "गाछ-बिरिक्ष द्वारा भोजन बनेबाक विधि",
+          "explanation": "जेना घरमे रसोइया चूल्हा पर अन्न, पानि आ आगीक उपयोग कऽ भोजन बनबैत छथि, तहिना गाछक हरियर पात घाम, पानि आ हवा सोखि कऽ अपन भोजन बनाबैत अछि।",
+          "metaphor": "हरियर पात गाछक रसोइघर थीक, जाहिमे घामक सहारा सँ पकवान बनैत अछि।"
+        },
+        "rural_hindi": {
+          "title": "पेड़-पौधों की अपनी रसोई",
+          "explanation": "जैसे घर की रसोई में चूल्हा जलाकर दाल-रोटी बनती है, वैसे ही पेड़ों की हरी पत्तियां धूप की गरमी, जड़ से पानी और हवा लेकर अपने लिए ताकत और मीठा खाना तैयार करती हैं।",
+          "metaphor": "पत्ती पेड़ की रसोई है और धूप चूल्हे की आग है।"
+        }
+      },
+      "audio_prompts": {
+        "en": "Plants make food using sunlight, water, and air.",
+        "hi": "पौधे धूप, पानी और हवा से अपना भोजन बनाते हैं।",
+        "bhojpuri": "पेड़-पौधा घाम, पानि आ हवा से आपन खाना बनावेला।"
+      },
+      "quiz_pool": [
+        {
+          "question_id": "q_photo_easy",
+          "difficulty": 1,
+          "question_text": {
+            "en": "What is the primary source of energy for plants to cook their food?",
+            "hi": "पौधों को अपना भोजन पकाने के लिए मुख्य ऊर्जा कहाँ से मिलती है?",
+            "bhojpuri": "पौधा के आपन खाना पकावे खातिर ऊर्जा (गरमी) कहाँ से मिलेला?"
+          },
+          "options": [
+            { "id": "a", "text": "Sunlight (घाम / सूर्य प्रकाश)", "is_correct": true },
+            { "id": "b", "text": "Tube light (बिजली बत्ती)", "is_correct": false },
+            { "id": "c", "text": "Moonlight (चांदनी)", "is_correct": false },
+            { "id": "d", "text": "Firewood (लकड़ी की आग)", "is_correct": false }
+          ],
+          "gap_tag": "ENERGY_SOURCE_CONFUSION",
+          "remedial_insight": "Remember: Just like a solar cooker needs direct sun, green leaves strictly need sunlight."
+        },
+        {
+          "question_id": "q_photo_med",
+          "difficulty": 2,
+          "question_text": {
+            "en": "Which gas do plants release into the air during photosynthesis that helps humans breathe?",
+            "hi": "प्रकाश संश्लेषण के दौरान पौधे कौन सी गैस हवा में छोड़ते हैं जिससे हम सांस लेते हैं?",
+            "bhojpuri": "खाना बनावे के बाद पौधा कउन गैस छोड़ेला जेकरा से हमनी सांस लेईला?"
+          },
+          "options": [
+            { "id": "a", "text": "Carbon Dioxide (धुआं/CO2)", "is_correct": false },
+            { "id": "b", "text": "Oxygen (ऑक्सीजन / प्राणवायु)", "is_correct": true },
+            { "id": "c", "text": "Nitrogen (नाइट्रोजन)", "is_correct": false },
+            { "id": "d", "text": "Methane (गोबर गैस)", "is_correct": false }
+          ],
+          "gap_tag": "GAS_EXCHANGE_CONFUSION",
+          "remedial_insight": "Plants absorb Carbon Dioxide from stale air and release clean Oxygen for humans and animals."
+        },
+        {
+          "question_id": "q_photo_hard",
+          "difficulty": 3,
+          "question_text": {
+            "en": "Which three things do green leaves use to make food?",
+            "hi": "हरे पत्ते भोजन बनाने के लिए किन तीन चीज़ों का उपयोग करते हैं?",
+            "bhojpuri": "हरियर पतई खाना बनावे खातिर कवन तीन चीज के इस्तेमाल करेली?"
+          },
+          "options": [
+            { "id": "a", "text": "Sunlight, water, and carbon dioxide (धूप, पानी और CO₂)", "is_correct": true },
+            { "id": "b", "text": "Moonlight, soil, and oxygen (चांदनी, मिट्टी और ऑक्सीजन)", "is_correct": false },
+            { "id": "c", "text": "Fire, water, and smoke (आग, पानी और धुआं)", "is_correct": false },
+            { "id": "d", "text": "Only water and soil (केवल पानी और मिट्टी)", "is_correct": false }
+          ],
+          "gap_tag": "PHOTOSYNTHESIS_INPUTS_CONFUSION",
+          "remedial_insight": "A green leaf uses sunlight, water, and carbon dioxide to make its food."
+        }
+      ]
+    },
+    {
+      "id": "math_num_01",
+      "grade": 5,
+      "subject": "Mathematics",
+      "topic": "Fractions (भिन्न और बंटवारा)",
+      "standard_definitions": {
+        "en": "A fraction represents a part of a whole or any number of equal parts.",
+        "hi": "भिन्न किसी संपूर्ण वस्तु के किसी एक या अधिक बराबर भागों को व्यक्त करती है।"
+      },
+      "dialect_adaptations": {
+        "bhojpuri": {
+          "title": "बराबर बंटवारा (अधिया आ चौथाई)",
+          "explanation": "एगो खेत भा एगो गोल रोटी के जब चार गो भाई में बराबर-बराबर बांटल जाला, त हर भाई के मिले वाला हिस्सा के भिन्न कहल जाला। जइसे चार हिस्सा में से एक हिस्सा भईल 1/4 (चौथाई)।",
+          "metaphor": "एगो खेत के 4 गो खंभा गाड़ के बराबर बांटब त हर टुकड़ा 1/4 भईल।"
+        },
+        "rural_hindi": {
+          "title": "रोटी और खेत का बंटवारा",
+          "explanation": "अगर एक पूरी रोटी को दो बराबर टुकड़ों में तोड़ दिया जाए, तो हर टुकड़े को आधा यानी 1/2 कहते हैं। नीचे की संख्या बताती है कि कुल कितने टुकड़े हुए, और ऊपर की संख्या बताती है कि आपको कितना मिला।",
+          "metaphor": "नीचे वाला कुल टुकड़े (हर), ऊपर वाला आपका हिस्सा (अंश)।"
+        }
+      },
+      "audio_prompts": {
+        "en": "Fractions mean equal parts of a whole thing.",
+        "hi": "भिन्न का मतलब है किसी पूरी चीज़ का बराबर-बराबर बंटवारा।",
+        "bhojpuri": "भिन्न मतलब कउनो पुरा चीज के बराबर-बराबर हिस्सा।"
+      },
+      "quiz_pool": [
+        {
+          "question_id": "q_frac_easy",
+          "difficulty": 1,
+          "question_text": {
+            "en": "If a farmer divides 1 field equally among 2 sons, what fraction does each son get?",
+            "hi": "यदि एक किसान अपने 1 खेत को 2 बेटों में बराबर बांटता है, तो प्रत्येक को कितना हिस्सा मिलेगा?",
+            "bhojpuri": "अगर एगो किसान आपन 1 गो खेत 2 बेटवन में बराबर बांटे, त हर बेटा के केतना हिस्सा मिली?"
+          },
+          "options": [
+            { "id": "a", "text": "1/2 (आधा / अधिया)", "is_correct": true },
+            { "id": "b", "text": "1/4 (चौथाई)", "is_correct": false },
+            { "id": "c", "text": "2/1 (दूगो खेत)", "is_correct": false },
+            { "id": "d", "text": "1/3 (तिहाई)", "is_correct": false }
+          ],
+          "gap_tag": "BASIC_RATIO_ERROR",
+          "remedial_insight": "Dividing anything into 2 equal parts gives 1/2 (half)."
+        },
+        {
+          "question_id": "q_frac_med",
+          "difficulty": 2,
+          "question_text": {
+            "en": "A field is divided into 4 equal parts. A family plants crops on 3 parts. What fraction is planted?",
+            "hi": "एक खेत को 4 बराबर हिस्सों में बांटा गया। परिवार ने 3 हिस्सों में फसल बोई। कितना हिस्सा बोया गया?",
+            "bhojpuri": "खेत के 4 बराबर हिस्सा कइल गइल। परिवार 3 हिस्सा में फसल बोवलस। केतना हिस्सा में फसल बोवल गइल?"
+          },
+          "options": [
+            { "id": "a", "text": "3/4 (तीन चौथाई)", "is_correct": true },
+            { "id": "b", "text": "1/3 (एक तिहाई)", "is_correct": false },
+            { "id": "c", "text": "4/3 (चार तिहाई)", "is_correct": false },
+            { "id": "d", "text": "1/4 (एक चौथाई)", "is_correct": false }
+          ],
+          "gap_tag": "DENOMINATOR_MISUNDERSTANDING",
+          "remedial_insight": "The 4 equal parts are the whole; the 3 planted parts are the share, so the fraction is 3/4."
+        },
+        {
+          "question_id": "q_frac_hard",
+          "difficulty": 3,
+          "question_text": {
+            "en": "A farmer shares 3/4 of a field equally between 2 children. What fraction of the whole field does each child get?",
+            "hi": "किसान अपने खेत के 3/4 हिस्से को 2 बच्चों में बराबर बांटता है। हर बच्चे को पूरे खेत का कितना हिस्सा मिलेगा?",
+            "bhojpuri": "किसान खेत के 3/4 हिस्सा के 2 बच्चा में बराबर बांटेला। हर बच्चा के पूरा खेत के केतना हिस्सा मिली?"
+          },
+          "options": [
+            { "id": "a", "text": "3/8", "is_correct": true },
+            { "id": "b", "text": "3/2", "is_correct": false },
+            { "id": "c", "text": "1/8", "is_correct": false },
+            { "id": "d", "text": "3/4", "is_correct": false }
+          ],
+          "gap_tag": "FRACTION_SHARING_ERROR",
+          "remedial_insight": "Sharing 3/4 equally between 2 means each gets half of 3/4: 3/8 of the whole field."
+        }
+      ]
+    }
+  ],
+  "teacher_analytics_seed": {
+    "total_students_enrolled": 42,
+    "rural_hub": "Panchayat Learning Center, Ward 4",
+    "common_misconceptions": [
+      {
+        "topic": "Photosynthesis",
+        "gap_tag": "GAS_EXCHANGE_CONFUSION",
+        "affected_percentage": 64,
+        "recommended_action": "Explain gas exchange during evening class using the breathing in vs breathing out analogy."
+      },
+      {
+        "topic": "Fractions",
+        "gap_tag": "BASIC_RATIO_ERROR",
+        "affected_percentage": 28,
+        "recommended_action": "Use paper folding or sticks division before introducing numerator and denominator symbols."
+      }
+    ]
+  }
+}
